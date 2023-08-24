@@ -1,0 +1,18 @@
+.cabecalho {
+  width: 100%;
+  background-color: var(--color-blue-3);
+}
+.cabecalho .nav {
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.cabecalho .nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
