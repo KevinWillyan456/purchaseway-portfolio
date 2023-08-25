@@ -7,3 +7,9 @@
   flex-wrap: wrap;
   gap: 40px 210px;
 }
+@media (max-width: 1250px) {
+  .main {
+    gap: 40px;
+    flex-direction: column;
+  }
+}

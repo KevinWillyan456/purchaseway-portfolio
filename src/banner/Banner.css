@@ -17,6 +17,17 @@
     0 0 3.5px var(--color-black), 0 0 3.5px var(--color-black),
     0 0 3.5px var(--color-black);
 }
+@media (max-width: 1250px) {
+  .banner .title {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 400;
+    top: 90px;
+    width: 320px;
+    left: 20px;
+    text-align: left;
+  }
+}
 .banner .logo-medium {
   position: absolute;
   bottom: 19.53125%;

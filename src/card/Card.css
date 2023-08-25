@@ -6,6 +6,14 @@
   box-shadow: 0px 0px 20px 0px #000;
   position: relative;
 }
+@media (max-width: 1250px) {
+  .main .card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .main .card .cover {
   width: 480px;
   height: 260px;
@@ -16,6 +24,11 @@
   pointer-events: none;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+}
+@media (max-width: 1250px) {
+  .main .card .cover {
+    width: 100%;
+  }
 }
 .main .card .cover img {
   width: 100%;
@@ -39,6 +52,14 @@
   height: 100px;
   overflow-y: auto;
   transform: translateX(-10px);
+}
+@media (max-width: 1250px) {
+  .main .card .title {
+    padding: 20px 12px;
+  }
+  .main .card .description {
+    padding: 0 5px 0 22px;
+  }
 }
 .main .card .description::-webkit-scrollbar {
   width: 10px;
@@ -70,6 +91,14 @@
   bottom: 20px;
   right: 20px;
   cursor: pointer;
+}
+@media (max-width: 1250px) {
+  .main .card .btn-visit {
+    width: 200px;
+    height: 40px;
+    right: calc(50% - 200px / 2);
+    bottom: 12px;
+  }
 }
 .main .card .btn-visit:hover {
   background: #1218b1;
