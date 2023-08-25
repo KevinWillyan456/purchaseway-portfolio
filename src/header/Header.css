@@ -1,18 +1,38 @@
 .cabecalho {
   width: 100%;
-  background-color: var(--color-blue-3);
+  height: 60px;
+  background-color: var(--color-blue-2);
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
 }
 .cabecalho .nav {
   width: 100%;
+  max-width: calc(1170px - 40px);
+  margin: 0 auto;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 0 20px;
 }
-
+.cabecalho .nav .logo {
+  display: flex;
+  cursor: pointer;
+}
 .cabecalho .nav ul {
-  list-style-type: none;
   display: flex;
   gap: 20px;
+  list-style-type: none;
+}
+.cabecalho .nav ul li a {
+  transition: 200ms;
+  color: var(--color-white);
+  font-size: 20px;
+  font-weight: 400;
+}
+.cabecalho .nav ul li a:hover {
+  color: var(--color-blue-4);
 }

@@ -2,15 +2,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Lato", sans-serif;
+  font-family: "Lexend", sans-serif;
 }
 
 :root {
   --color-blue-1: #040628;
   --color-blue-2: #090d42;
   --color-blue-3: #0e1272;
-  --color-blue-4: #141999;
-  --color-blue-5: #1a1fbc;
+  --color-blue-4: #161bcf;
+  --color-white: #ffffff;
+  --color-black: #000000;
 }
 
 a {

@@ -1,0 +1,29 @@
+.banner {
+  min-height: 100vh;
+  background-image: url("/banner-background.png");
+  background: url("/banner-background.png") var(--color-blue-1) 50% / cover
+    no-repeat;
+  position: relative;
+}
+.banner .title {
+  color: #fff;
+  font-family: Lexend;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: absolute;
+  bottom: 29.94791667%;
+  width: 1080px;
+  text-align: center;
+  left: calc(50% - 1080px / 2);
+  text-shadow: 0 0 3.5px var(--color-black), 0 0 3.5px var(--color-black),
+    0 0 3.5px var(--color-black), 0 0 3.5px var(--color-black),
+    0 0 3.5px var(--color-black);
+}
+.banner .logo-medium {
+  position: absolute;
+  bottom: 19.53125%;
+  width: 300px;
+  left: calc(50% - 300px / 2);
+}

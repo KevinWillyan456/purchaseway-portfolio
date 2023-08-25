@@ -1,10 +1,14 @@
 import "./Header.css";
 
+import logo from "/purchaseway-logo.png";
+
 function Header() {
   return (
     <header className="cabecalho">
       <nav className="nav">
-        <div className="logo">Logo</div>
+        <a href="/" className="logo">
+          <img src={logo} alt="purchaseway-logo" />
+        </a>
         <ul>
           <li>
             <a href="#">Início</a>
