@@ -10,7 +10,7 @@
 }
 .cabecalho .nav {
   width: 100%;
-  max-width: calc(1170px - 40px);
+  max-width: calc(1170px + 40px);
   margin: 0 auto;
   color: white;
   display: flex;

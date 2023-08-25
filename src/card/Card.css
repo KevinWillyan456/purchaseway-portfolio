@@ -1,0 +1,77 @@
+.main .card {
+  width: 480px;
+  height: 500px;
+  border-radius: 10px;
+  background: var(--color-blue-2);
+  box-shadow: 0px 0px 20px 0px #000;
+  position: relative;
+}
+.main .card .cover {
+  width: 480px;
+  height: 260px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.main .card .cover img {
+  width: 100%;
+}
+.main .card .title {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  width: 100%;
+  padding: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.main .card .description {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  width: 100%;
+  padding: 0 5px 0 30px;
+  height: 100px;
+  overflow-y: auto;
+  transform: translateX(-10px);
+}
+.main .card .description::-webkit-scrollbar {
+  width: 10px;
+}
+
+.main .card .description::-webkit-scrollbar-track {
+  background: var(--color-black);
+  border-radius: 10px;
+}
+.main .card .description::-webkit-scrollbar-thumb {
+  background-color: var(--color-blue-4);
+  border-radius: 10px;
+}
+.main .card .btn-visit {
+  transition: 200ms;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 95px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--color-blue-3);
+  box-shadow: 0px 0px 10px 0px #000;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+.main .card .btn-visit:hover {
+  background: #1218b1;
+  box-shadow: 0px 0px 10px 0px #1218b1;
+}
