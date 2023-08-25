@@ -7,9 +7,9 @@ function Banner() {
       <div className="title">
         Conheça a empresa inovadora em serviços para a web
       </div>
-      <div className="logo-medium">
+      <a href="/" className="logo-medium">
         <img src={logoMedium} alt="purchaseway-medium-logo" />
-      </div>
+      </a>
     </section>
   );
 }
