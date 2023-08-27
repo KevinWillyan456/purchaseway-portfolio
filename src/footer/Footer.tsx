@@ -52,6 +52,14 @@ function Footer() {
                 Pw Music
               </a>
             </li>
+            <li>
+              <a
+                href="https://kevinwillyan456.github.io/pw-music-game/"
+                target="_blank"
+              >
+                Pw Music Game
+              </a>
+            </li>
           </ul>
           <ul>
             <li>

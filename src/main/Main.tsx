@@ -42,6 +42,14 @@ const data: IData[] = [
       "O sistema de gerenciamento de músicas da Purchaseway é uma solução abrangente que capacita os amantes da música a organizar, explorar e desfrutar de suas coleções musicais de maneira única.",
     url: "https://apague-pw.kevinsouza456.repl.co/",
   },
+  {
+    id: 5,
+    cover: "/pw-music-game-preview.png",
+    title: "Pw Music Game",
+    description:
+      "O Jogo Rítmico estilo Guitar Hero criado pela Purchaseway traz uma experiência inovadora nessa temática, jogue com as teclas D, F, J e K",
+    url: "https://kevinwillyan456.github.io/pw-music-game/",
+  },
 ];
 
 function Main() {
