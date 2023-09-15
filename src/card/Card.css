@@ -1,4 +1,5 @@
-.main .card {
+.project-container .card {
+  animation: animation-no-results-card 500ms forwards;
   width: 480px;
   height: 500px;
   border-radius: 10px;
@@ -6,15 +7,23 @@
   box-shadow: 0px 0px 20px 0px #000;
   position: relative;
 }
+@keyframes animation-no-results-card {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @media (max-width: 1250px) {
-  .main .card {
+  .project-container .card {
     width: 100%;
     display: flex;
     flex-direction: column;
   }
 }
 
-.main .card .cover {
+.project-container .card .cover {
   width: 480px;
   height: 260px;
   overflow: hidden;
@@ -26,14 +35,14 @@
   border-top-right-radius: 10px;
 }
 @media (max-width: 1250px) {
-  .main .card .cover {
+  .project-container .card .cover {
     width: 100%;
   }
 }
-.main .card .cover img {
+.project-container .card .cover img {
   width: 100%;
 }
-.main .card .title {
+.project-container .card .title {
   color: #fff;
   font-size: 20px;
   font-weight: 700;
@@ -43,7 +52,7 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.main .card .description {
+.project-container .card .description {
   color: #fff;
   font-size: 16px;
   font-weight: 400;
@@ -54,26 +63,25 @@
   transform: translateX(-10px);
 }
 @media (max-width: 1250px) {
-  .main .card .title {
+  .project-container .card .title {
     padding: 20px 12px;
   }
-  .main .card .description {
+  .project-container .card .description {
     padding: 0 5px 0 22px;
   }
 }
-.main .card .description::-webkit-scrollbar {
+.project-container .card .description::-webkit-scrollbar {
   width: 10px;
 }
-
-.main .card .description::-webkit-scrollbar-track {
+.project-container .card .description::-webkit-scrollbar-track {
   background: var(--color-black);
   border-radius: 10px;
 }
-.main .card .description::-webkit-scrollbar-thumb {
+.project-container .card .description::-webkit-scrollbar-thumb {
   background-color: var(--color-blue-4);
   border-radius: 10px;
 }
-.main .card .btn-visit {
+.project-container .card .btn-visit {
   transition: 200ms;
   display: flex;
   align-items: center;
@@ -93,14 +101,14 @@
   cursor: pointer;
 }
 @media (max-width: 1250px) {
-  .main .card .btn-visit {
+  .project-container .card .btn-visit {
     width: 200px;
     height: 40px;
     right: calc(50% - 200px / 2);
     bottom: 12px;
   }
 }
-.main .card .btn-visit:hover {
+.project-container .card .btn-visit:hover {
   background: #1218b1;
   box-shadow: 0px 0px 10px 0px #1218b1;
 }

@@ -1,4 +1,6 @@
+import { useEffect, useState } from "react";
 import Card from "../card/Card";
+import Search from "../search/Search";
 import "./Main.css";
 
 export interface IData {
@@ -53,11 +55,46 @@ const data: IData[] = [
 ];
 
 function Main() {
+  const [projects, setProjects] = useState<IData[]>([...data]);
+  const [projectSearch, setProjectSearch] = useState("");
+
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setProjectSearch(e.target.value);
+  };
+
+  const clearSearch = () => {
+    setProjectSearch("");
+  };
+
+  useEffect(() => {
+    const dataSerched = data.filter((project) => {
+      if (projectSearch === " ") {
+        return project;
+      }
+      return project.title.toLowerCase().includes(projectSearch.toLowerCase());
+    });
+
+    setProjects(dataSerched);
+  }, [projectSearch]);
+
   return (
     <main className="main">
-      {data.map((item) => (
-        <Card key={item.id} data={item} />
-      ))}
+      <div className="project-title">
+        <div className="title">Descubra nossos Projetos em Produção</div>
+        <div className="title-sub">Conheça eles agora mesmo!</div>
+      </div>
+      <Search
+        projectSearch={projectSearch}
+        handleSearch={handleSearch}
+        clearSearch={clearSearch}
+      />
+      <main className="project-container">
+        {projects.length > 0 ? (
+          projects.map((item) => <Card key={item.id} data={item} />)
+        ) : (
+          <div className="no-results-title">Sem resultados</div>
+        )}
+      </main>
     </main>
   );
 }
