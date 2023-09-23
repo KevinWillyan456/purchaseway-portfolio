@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import Card from "../card/Card";
-import Search from "../search/Search";
+import Card from "./components/card/Card";
+import Search from "./components/search/Search";
 import "./Main.css";
 
 export interface IData {

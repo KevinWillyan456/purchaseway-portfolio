@@ -1,4 +1,4 @@
-import { IData } from "../main/Main";
+import { IData } from "../../Main";
 import "./Card.css";
 
 function Card({ data }: { data: IData }) {

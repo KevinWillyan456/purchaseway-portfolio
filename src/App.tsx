@@ -1,7 +1,7 @@
-import Banner from "./banner/Banner";
-import Footer from "./footer/Footer";
-import Header from "./header/Header";
-import Main from "./main/Main";
+import Banner from "./components/banner/Banner";
+import Footer from "./components/footer/Footer";
+import Header from "./components/header/Header";
+import Main from "./components/main/Main";
 
 function App() {
   return (
