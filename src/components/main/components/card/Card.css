@@ -1,114 +1,114 @@
 .project-container .card {
-  animation: animation-no-results-card 500ms forwards;
-  width: 480px;
-  height: 500px;
-  border-radius: 10px;
-  background: var(--color-blue-2);
-  box-shadow: 0px 0px 20px 0px #000;
-  position: relative;
+    animation: animation-no-results-card 500ms forwards;
+    width: 480px;
+    height: 500px;
+    border-radius: 10px;
+    background: var(--color-blue-2);
+    box-shadow: 0px 0px 20px 0px #000;
+    position: relative;
 }
 @keyframes animation-no-results-card {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 @media (max-width: 1250px) {
-  .project-container .card {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
+    .project-container .card {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .project-container .card .cover {
-  width: 480px;
-  height: 260px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+    width: 480px;
+    height: 260px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 @media (max-width: 1250px) {
-  .project-container .card .cover {
-    width: 100%;
-  }
+    .project-container .card .cover {
+        width: 100%;
+    }
 }
 .project-container .card .cover img {
-  width: 100%;
+    width: 100%;
 }
 .project-container .card .title {
-  color: #fff;
-  font-size: 20px;
-  font-weight: 700;
-  width: 100%;
-  padding: 20px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    width: 100%;
+    padding: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .project-container .card .description {
-  color: #fff;
-  font-size: 16px;
-  font-weight: 400;
-  width: 100%;
-  padding: 0 5px 0 30px;
-  height: 100px;
-  overflow-y: auto;
-  transform: translateX(-10px);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    width: 100%;
+    padding: 0 5px 0 30px;
+    height: 100px;
+    overflow-y: auto;
+    transform: translateX(-10px);
 }
 @media (max-width: 1250px) {
-  .project-container .card .title {
-    padding: 20px 12px;
-  }
-  .project-container .card .description {
-    padding: 0 5px 0 22px;
-  }
+    .project-container .card .title {
+        padding: 20px 12px;
+    }
+    .project-container .card .description {
+        padding: 0 5px 0 22px;
+    }
 }
 .project-container .card .description::-webkit-scrollbar {
-  width: 10px;
+    width: 10px;
 }
 .project-container .card .description::-webkit-scrollbar-track {
-  background: var(--color-black);
-  border-radius: 10px;
+    background: var(--color-black);
+    border-radius: 10px;
 }
 .project-container .card .description::-webkit-scrollbar-thumb {
-  background-color: var(--color-blue-4);
-  border-radius: 10px;
+    background-color: var(--color-blue-4);
+    border-radius: 10px;
 }
 .project-container .card .btn-visit {
-  transition: 200ms;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 95px;
-  height: 40px;
-  border-radius: 10px;
-  background: var(--color-blue-3);
-  box-shadow: 0px 0px 10px 0px #000;
-  color: #fff;
-  text-align: center;
-  font-size: 20px;
-  font-weight: 700;
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  cursor: pointer;
+    transition: 200ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95px;
+    height: 40px;
+    border-radius: 10px;
+    background: var(--color-blue-3);
+    box-shadow: 0px 0px 10px 0px #000;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
 }
 @media (max-width: 1250px) {
-  .project-container .card .btn-visit {
-    width: 200px;
-    height: 40px;
-    right: calc(50% - 200px / 2);
-    bottom: 12px;
-  }
+    .project-container .card .btn-visit {
+        width: 200px;
+        height: 40px;
+        right: calc(50% - 200px / 2);
+        bottom: 12px;
+    }
 }
 .project-container .card .btn-visit:hover {
-  background: #1218b1;
-  box-shadow: 0px 0px 10px 0px #1218b1;
+    background: #1218b1;
+    box-shadow: 0px 0px 10px 0px #1218b1;
 }
