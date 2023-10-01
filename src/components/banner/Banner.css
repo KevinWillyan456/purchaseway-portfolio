@@ -5,6 +5,7 @@
     position: relative;
 }
 .banner .title {
+    animation: animation-flutter-banner 10s infinite linear;
     color: #fff;
     font-size: 40px;
     font-weight: 400;
@@ -16,6 +17,26 @@
     text-shadow: 0 0 3.5px var(--color-black), 0 0 3.5px var(--color-black),
         0 0 3.5px var(--color-black), 0 0 3.5px var(--color-black),
         0 0 3.5px var(--color-black);
+}
+.banner .logo-medium {
+    animation: animation-flutter-banner 10s infinite linear;
+}
+@keyframes animation-flutter-banner {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 @media (max-width: 1250px) {
     .banner .title {

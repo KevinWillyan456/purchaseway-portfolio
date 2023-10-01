@@ -53,7 +53,14 @@ function Header() {
                 </ul>
                 <ul className={menu ? "nav-mobile" : "nav-mobile hidden"}>
                     <li>
-                        <Link to="/">Início</Link>
+                        <Link
+                            to="/"
+                            onClick={() => {
+                                scrollToTop();
+                            }}
+                        >
+                            Início
+                        </Link>
                     </li>
                     <li>
                         <a href="#">Sobre</a>
