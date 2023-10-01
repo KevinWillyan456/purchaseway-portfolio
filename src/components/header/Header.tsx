@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./Header.css";
 
 import logo from "/purchaseway-logo.png";
+import { Link } from "react-router-dom";
 
 function Header() {
     const [menu, setMenu] = useState(false);
@@ -10,15 +11,35 @@ function Header() {
         setMenu(!menu);
     };
 
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    };
+
     return (
         <header className="cabecalho">
             <nav className="nav">
-                <a href="/" className="logo">
+                <Link
+                    to="/"
+                    className="logo"
+                    onClick={() => {
+                        scrollToTop();
+                    }}
+                >
                     <img src={logo} alt="purchaseway-logo" />
-                </a>
+                </Link>
                 <ul>
                     <li>
-                        <a href="#">Início</a>
+                        <Link
+                            to="/"
+                            onClick={() => {
+                                scrollToTop();
+                            }}
+                        >
+                            Início
+                        </Link>
                     </li>
                     <li>
                         <a href="#">Sobre</a>
@@ -32,7 +53,7 @@ function Header() {
                 </ul>
                 <ul className={menu ? "nav-mobile" : "nav-mobile hidden"}>
                     <li>
-                        <a href="#">Início</a>
+                        <Link to="/">Início</Link>
                     </li>
                     <li>
                         <a href="#">Sobre</a>

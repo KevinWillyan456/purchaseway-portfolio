@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Footer.css";
 
 import logo from "/purchaseway-logo.png";
@@ -9,9 +10,9 @@ function Footer() {
                 <section className="content">
                     <ul>
                         <li className="logo">
-                            <a href="/">
+                            <Link to="/">
                                 <img src={logo} alt="purchaseway-logo" />
-                            </a>
+                            </Link>
                         </li>
                         <li className="overview">
                             A Purchaseway é uma empresa inovadora que se destaca
