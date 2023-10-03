@@ -2,7 +2,7 @@
     width: 100%;
 }
 .main-contact .main-content {
-    width: 1360px;
+    width: 100%;
     max-width: 1360px;
     margin: 0 auto;
 }
@@ -42,20 +42,29 @@
 }
 .main-form-tag {
     width: 560px;
-    height: 495px;
+    height: 497px;
     border-radius: 10px;
     border: 3px solid var(--color-white);
     background: var(--color-blue-2);
-    padding: 0 30px;
-    flex-direction: column;
 }
 .main-form-tag .title {
     color: var(--color-white);
     font-size: 20px;
-    margin-top: 40px;
+    margin-top: 30px;
+    margin-left: 30px;
     margin-bottom: 20px;
 }
-.main-form-tag input {
+.main-form-tag .field {
+    position: relative;
+}
+.main-form-tag .field .validate-message {
+    position: absolute;
+    bottom: 100%;
+    left: 30px;
+    color: #f32c12;
+}
+.main-form-tag .field input {
+    transition: 200ms;
     width: 500px;
     height: 40px;
     border-radius: 10px;
@@ -65,13 +74,16 @@
     color: var(--color-blue-1);
     font-size: 18px;
     border: none;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
-.main-form-tag input::placeholder {
+.main-form-tag .field input::placeholder {
     color: var(--color-blue-1);
     font-size: 18px;
 }
-.main-form-tag textarea {
+.main-form-tag .field textarea {
+    transition: 200ms;
     width: 500px;
     max-width: 500px;
     min-width: 500px;
@@ -85,12 +97,21 @@
     padding: 10px;
     color: var(--color-blue-1);
     font-size: 18px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
-.main-form-tag textarea::placeholder {
+.main-form-tag .field textarea::placeholder {
     color: var(--color-blue-1);
     font-size: 18px;
 }
+.main-form-tag .field input:focus,
+.main-form-tag .field textarea:focus {
+    box-shadow: 0 0 10px #1218b1, 0 0 10px #1218b1, 0 0 10px #1218b1,
+        0 0 10px #1218b1, 0 0 10px #1218b1, 0 0 10px #1218b1, 0 0 10px #1218b1,
+        0 0 10px #1218b1, 0 0 10px #1218b1, 0 0 30px #1218b1;
+}
 .main-form-tag button {
+    transition: 200ms;
     width: 95px;
     height: 40px;
     border-radius: 10px;
@@ -105,4 +126,9 @@
     border: none;
     cursor: pointer;
     margin-top: 20px;
+    margin-left: 30px;
+}
+.main-form-tag button:hover {
+    background: #1218b1;
+    box-shadow: 0px 0px 10px 0px #1218b1;
 }
