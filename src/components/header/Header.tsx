@@ -26,7 +26,7 @@ function Header() {
                     className="logo"
                     onClick={() => {
                         scrollToTop();
-                        handleMenu();
+                        setMenu(false);
                     }}
                 >
                     <img src={logo} alt="purchaseway-logo" />

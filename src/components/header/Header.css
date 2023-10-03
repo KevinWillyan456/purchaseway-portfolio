@@ -63,7 +63,6 @@
 }
 .cabecalho .nav .logo img {
     width: 100%;
-    transform: translateY(2px);
 }
 .cabecalho .nav ul {
     display: flex;
