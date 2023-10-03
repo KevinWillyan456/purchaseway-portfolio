@@ -69,7 +69,7 @@ function Header() {
                         <a href="#">Serviços</a>
                     </li>
                     <li>
-                        <a href="#">Contato</a>
+                        <Link to="/contact">Contato</Link>
                     </li>
                 </ul>
                 <div className="hamburger" onClick={handleMenu}>
