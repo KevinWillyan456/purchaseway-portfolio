@@ -26,6 +26,7 @@ function Header() {
                     className="logo"
                     onClick={() => {
                         scrollToTop();
+                        handleMenu();
                     }}
                 >
                     <img src={logo} alt="purchaseway-logo" />
@@ -48,7 +49,14 @@ function Header() {
                         <a href="#">Serviços</a>
                     </li>
                     <li>
-                        <Link to="/contact">Contato</Link>
+                        <Link
+                            to="/contact"
+                            onClick={() => {
+                                scrollToTop();
+                            }}
+                        >
+                            Contato
+                        </Link>
                     </li>
                 </ul>
                 <ul className={menu ? "nav-mobile" : "nav-mobile hidden"}>
@@ -57,6 +65,7 @@ function Header() {
                             to="/"
                             onClick={() => {
                                 scrollToTop();
+                                handleMenu();
                             }}
                         >
                             Início
@@ -69,7 +78,15 @@ function Header() {
                         <a href="#">Serviços</a>
                     </li>
                     <li>
-                        <Link to="/contact">Contato</Link>
+                        <Link
+                            to="/contact"
+                            onClick={() => {
+                                scrollToTop();
+                                handleMenu();
+                            }}
+                        >
+                            Contato
+                        </Link>
                     </li>
                 </ul>
                 <div className="hamburger" onClick={handleMenu}>
