@@ -1,8 +1,8 @@
-import { useState } from "react";
-import "./Header.css";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
+import "./Header.css";
 import logo from "/purchaseway-logo.png";
-import { Link } from "react-router-dom";
 
 function Header() {
     const [menu, setMenu] = useState(false);
@@ -12,11 +12,23 @@ function Header() {
     };
 
     const scrollToTop = () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-        });
+        setTimeout(() => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+        }, 50);
     };
+
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.pathname === "/about") {
+            document.body.classList.add("light");
+        } else {
+            document.body.classList.remove("light");
+        }
+    }, []);
 
     return (
         <header className="cabecalho">
@@ -43,10 +55,29 @@ function Header() {
                         </Link>
                     </li>
                     <li>
-                        <a href="#">Sobre</a>
+                        <Link
+                            to="/about"
+                            onClick={() => {
+                                scrollToTop();
+                            }}
+                        >
+                            Sobre
+                        </Link>
                     </li>
                     <li>
-                        <a href="#">Serviços</a>
+                        <Link
+                            to="/"
+                            onClick={() => {
+                                setTimeout(() => {
+                                    window.scrollTo({
+                                        top: window.innerHeight - 60,
+                                        behavior: "smooth",
+                                    });
+                                }, 50);
+                            }}
+                        >
+                            Serviços
+                        </Link>
                     </li>
                     <li>
                         <Link
@@ -72,10 +103,31 @@ function Header() {
                         </Link>
                     </li>
                     <li>
-                        <a href="#">Sobre</a>
+                        <Link
+                            to="/about"
+                            onClick={() => {
+                                scrollToTop();
+                                handleMenu();
+                            }}
+                        >
+                            Sobre
+                        </Link>
                     </li>
                     <li>
-                        <a href="#">Serviços</a>
+                        <Link
+                            to="/"
+                            onClick={() => {
+                                handleMenu();
+                                setTimeout(() => {
+                                    window.scrollTo({
+                                        top: window.innerHeight - 60,
+                                        behavior: "smooth",
+                                    });
+                                }, 50);
+                            }}
+                        >
+                            Serviços
+                        </Link>
                     </li>
                     <li>
                         <Link

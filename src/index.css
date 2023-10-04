@@ -25,6 +25,9 @@ a {
 body {
     background-color: var(--color-blue-1);
 }
+body.light {
+    background-color: var(--color-blue-5);
+}
 body::-webkit-scrollbar {
     width: 10px;
 }
