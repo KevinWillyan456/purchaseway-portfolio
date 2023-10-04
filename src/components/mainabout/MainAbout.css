@@ -21,6 +21,9 @@
 .main-about .main-content .content ul {
     padding-left: 35px;
 }
+.main-about .main-content .content ul li + li {
+    margin-top: 20px;
+}
 .main-about .main-qualities {
     width: 100%;
     background-color: var(--color-blue-6);
@@ -55,12 +58,14 @@
     font-size: 20px;
     padding: 0 20px;
 }
+@media (max-width: 1200px) {
+    .main-about .main-qualities .main-qualities-content {
+        justify-content: center;
+    }
+}
 @media (max-width: 720px) {
     .main-about {
         margin-top: 100px;
-    }
-    .main-about .main-qualities .main-qualities-content {
-        justify-content: center;
     }
     .main-about .main-content .title {
         font-size: 20px;

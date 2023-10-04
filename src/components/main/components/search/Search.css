@@ -44,6 +44,7 @@
     .search-project {
         height: 40px;
         margin: 0 auto 40px auto;
+        max-width: 480px;
         width: calc(100% - 40px);
     }
     .search-project.focused {
