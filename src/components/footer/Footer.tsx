@@ -4,6 +4,15 @@ import "./Footer.css";
 import logo from "/purchaseway-logo.png";
 
 function Footer() {
+    const scrollToTop = () => {
+        setTimeout(() => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+        }, 50);
+    };
+
     return (
         <footer className="footer">
             <div className="container-footer">
@@ -101,16 +110,39 @@ function Footer() {
                             <h1>Links</h1>
                         </li>
                         <li>
-                            <a href="#">Docs</a>
+                            <Link
+                                to="/about"
+                                onClick={() => {
+                                    scrollToTop();
+                                }}
+                            >
+                                Sobre
+                            </Link>
                         </li>
                         <li>
-                            <a href="#">Sobre</a>
+                            <Link
+                                to="/"
+                                onClick={() => {
+                                    setTimeout(() => {
+                                        window.scrollTo({
+                                            top: window.innerHeight - 60,
+                                            behavior: "smooth",
+                                        });
+                                    }, 50);
+                                }}
+                            >
+                                Serviços
+                            </Link>
                         </li>
                         <li>
-                            <a href="#">Suporte</a>
-                        </li>
-                        <li>
-                            <a href="#">Status</a>
+                            <Link
+                                to="/contact"
+                                onClick={() => {
+                                    scrollToTop();
+                                }}
+                            >
+                                Contato
+                            </Link>
                         </li>
                     </ul>
                 </section>

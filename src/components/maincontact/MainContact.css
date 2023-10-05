@@ -25,6 +25,7 @@
 }
 .main-contact .main-content .main-banner .main-highlight .cover {
     display: flex;
+    pointer-events: none;
 }
 .main-contact .main-content .main-banner .main-highlight .description {
     color: var(--color-white);
