@@ -38,6 +38,14 @@ const data: IData[] = [
     },
     {
         id: 4,
+        cover: "/pw-manga-preview.png",
+        title: "Purchaseway Manga",
+        description:
+            "A Plataforma de Mangás da Purchaseway é um universo digital que cativa os fãs de mangás, oferecendo uma ampla variedade de conteúdo.",
+        url: "https://purchaseway-manga.vercel.app/",
+    },
+    {
+        id: 5,
         cover: "/pw-music-preview.png",
         title: "Purchaseway Music",
         description:
@@ -45,7 +53,7 @@ const data: IData[] = [
         url: "https://apague-pw.kevinsouza456.repl.co/",
     },
     {
-        id: 5,
+        id: 6,
         cover: "/pw-music-game-preview.png",
         title: "Pw Music Game",
         description:

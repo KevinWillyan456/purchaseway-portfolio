@@ -59,6 +59,14 @@ function Footer() {
                         </li>
                         <li>
                             <a
+                                href="https://purchaseway-manga.vercel.app/"
+                                target="_blank"
+                            >
+                                Pw Manga
+                            </a>
+                        </li>
+                        <li>
+                            <a
                                 href="https://apague-pw.kevinsouza456.repl.co/"
                                 target="_blank"
                             >
