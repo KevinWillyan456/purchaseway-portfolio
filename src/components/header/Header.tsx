@@ -3,9 +3,12 @@ import { Link, useLocation } from "react-router-dom";
 
 import "./Header.css";
 import logo from "/purchaseway-logo.png";
+import { useMainProjectsRef } from "../../hooks/useMainProjectsRef";
 
 function Header() {
     const [menu, setMenu] = useState(false);
+
+    const mainProjectsRef = useMainProjectsRef();
 
     const handleMenu = () => {
         setMenu(!menu);
@@ -119,10 +122,20 @@ function Header() {
                             onClick={() => {
                                 handleMenu();
                                 setTimeout(() => {
-                                    window.scrollTo({
-                                        top: window.innerHeight - 60,
-                                        behavior: "smooth",
-                                    });
+                                    if (mainProjectsRef.current) {
+                                        window.scrollTo({
+                                            top: 0,
+                                            behavior: "instant",
+                                        });
+
+                                        const alturaElemento =
+                                            mainProjectsRef.current.getBoundingClientRect()
+                                                .top;
+                                        window.scrollTo({
+                                            top: alturaElemento - 100,
+                                            behavior: "smooth",
+                                        });
+                                    }
                                 }, 50);
                             }}
                         >

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Card from "./components/card/Card";
 import Search from "./components/search/Search";
 import "./Main.css";
+import { useMainProjectsRef } from "../../hooks/useMainProjectsRef";
 
 export interface IData {
     id: number;
@@ -66,6 +67,8 @@ function Main() {
     const [projects, setProjects] = useState<IData[]>([...data]);
     const [projectSearch, setProjectSearch] = useState("");
 
+    const mainProjectsRef = useMainProjectsRef();
+
     const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
         setProjectSearch(e.target.value);
     };
@@ -88,7 +91,7 @@ function Main() {
     }, [projectSearch]);
 
     return (
-        <main className="main">
+        <main className="main" ref={mainProjectsRef}>
             <div className="project-title">
                 <div className="title">
                     Descubra nossos Projetos em Produção

@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import ErrorPage from "./pages/ErrorPage";
 import About from "./pages/About";
+import { MainProjectsContextProvider } from "./contexts/MainProjectsContext";
 
 const router = createBrowserRouter([
     {
@@ -25,6 +26,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
     <React.StrictMode>
-        <RouterProvider router={router} />
+        <MainProjectsContextProvider>
+            <RouterProvider router={router} />
+        </MainProjectsContextProvider>
     </React.StrictMode>
 );
