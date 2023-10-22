@@ -48,7 +48,11 @@ function MainContact() {
             return;
         }
 
-        alert("Enviado com suceeso!");
+        setNameInput("");
+        setLastNameInput("");
+        setEmailInput("");
+        setMessageInput("");
+        alert("Enviado com sucesso!");
     };
 
     return (
