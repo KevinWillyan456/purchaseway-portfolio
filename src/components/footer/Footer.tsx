@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "./Footer.css";
 
 import logo from "/purchaseway-logo.png";
+import { useMainProjectsRef } from "../../hooks/useMainProjectsRef";
 
 function Footer() {
     const scrollToTop = () => {
@@ -12,6 +13,8 @@ function Footer() {
             });
         }, 50);
     };
+
+    const mainProjectsRef = useMainProjectsRef();
 
     return (
         <footer className="footer">
@@ -132,10 +135,27 @@ function Footer() {
                                 to="/"
                                 onClick={() => {
                                     setTimeout(() => {
-                                        window.scrollTo({
-                                            top: window.innerHeight - 60,
-                                            behavior: "smooth",
-                                        });
+                                        if (window.innerWidth > 600) {
+                                            window.scrollTo({
+                                                top: window.innerHeight - 60,
+                                                behavior: "smooth",
+                                            });
+                                        } else {
+                                            if (mainProjectsRef.current) {
+                                                window.scrollTo({
+                                                    top: 0,
+                                                    behavior: "instant",
+                                                });
+
+                                                const alturaElemento =
+                                                    mainProjectsRef.current.getBoundingClientRect()
+                                                        .top;
+                                                window.scrollTo({
+                                                    top: alturaElemento - 100,
+                                                    behavior: "smooth",
+                                                });
+                                            }
+                                        }
                                     }, 50);
                                 }}
                             >
