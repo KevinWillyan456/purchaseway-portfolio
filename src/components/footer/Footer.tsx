@@ -22,7 +22,12 @@ function Footer() {
                 <section className="content">
                     <ul>
                         <li className="logo">
-                            <Link to="/">
+                            <Link
+                                to="/"
+                                onClick={() => {
+                                    scrollToTop();
+                                }}
+                            >
                                 <img src={logo} alt="purchaseway-logo" />
                             </Link>
                         </li>
