@@ -43,14 +43,6 @@ function Footer() {
                         </li>
                         <li>
                             <a
-                                href="https://purchaseway-animes-node.kevinsouza456.repl.co/"
-                                target="_blank"
-                            >
-                                Pw Animes
-                            </a>
-                        </li>
-                        <li>
-                            <a
                                 href="https://pw-animes-react.vercel.app/"
                                 target="_blank"
                             >
@@ -75,7 +67,7 @@ function Footer() {
                         </li>
                         <li>
                             <a
-                                href="https://apague-pw.kevinsouza456.repl.co/"
+                                href="https://purchaseway-music.onrender.com/"
                                 target="_blank"
                             >
                                 Pw Music
@@ -180,7 +172,7 @@ function Footer() {
                     </ul>
                 </section>
                 <div className="copyright">
-                    @ 2022-2023 Purchaseway - Todos os diretos reservados
+                    @ 2022-2024 Purchaseway - Todos os diretos reservados
                 </div>
             </div>
         </footer>

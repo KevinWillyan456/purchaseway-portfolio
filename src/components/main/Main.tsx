@@ -15,14 +15,6 @@ export interface IData {
 const data: IData[] = [
     {
         id: 1,
-        cover: "/pw-animes-preview.png",
-        title: "Purchaseway Animes",
-        description:
-            "A Plataforma de Animes da Purchaseway é um universo digital que cativa os fãs de animação japonesa, oferecendo uma ampla variedade de séries, filmes e conteúdo relacionado.",
-        url: "https://purchaseway-animes-node.kevinsouza456.repl.co/",
-    },
-    {
-        id: 2,
         cover: "/pw-animes-react-preview.png",
         title: "Purchaseway Animes React",
         description:
@@ -30,7 +22,7 @@ const data: IData[] = [
         url: "https://pw-animes-react.vercel.app/",
     },
     {
-        id: 3,
+        id: 2,
         cover: "/pw-exports-preview.png",
         title: "Purchaseway Exports",
         description:
@@ -38,7 +30,7 @@ const data: IData[] = [
         url: "https://kevinwillyan456.github.io/purchaseway-exports/",
     },
     {
-        id: 4,
+        id: 3,
         cover: "/pw-manga-preview.png",
         title: "Purchaseway Manga",
         description:
@@ -46,12 +38,12 @@ const data: IData[] = [
         url: "https://purchaseway-manga.vercel.app/",
     },
     {
-        id: 5,
+        id: 4,
         cover: "/pw-music-preview.png",
         title: "Purchaseway Music",
         description:
             "O sistema de gerenciamento de músicas da Purchaseway é uma solução abrangente que capacita os amantes da música a organizar, explorar e desfrutar de suas coleções musicais de maneira única.",
-        url: "https://apague-pw.kevinsouza456.repl.co/",
+        url: "https://purchaseway-music.onrender.com/",
     },
     {
         id: 6,
@@ -63,8 +55,18 @@ const data: IData[] = [
     },
 ];
 
+data.sort((a, b) => {
+    if (a.title > b.title) {
+        return 1;
+    }
+    if (a.title < b.title) {
+        return -1;
+    }
+    return 0;
+});
+
 function Main() {
-    const [projects, setProjects] = useState<IData[]>([...data]);
+    const [projects, setProjects] = useState<IData[]>(data);
     const [projectSearch, setProjectSearch] = useState("");
 
     const mainProjectsRef = useMainProjectsRef();
